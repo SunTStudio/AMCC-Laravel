@@ -5,14 +5,17 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Book;
+use Faker\Factory as Faker;
 
 class BookSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
+
     public function run(): void
     {
-        Book::factory()->count(50)->create();
+        $faker = Faker::create('id_ID');
+        Book::factory()->count(20)->create();
     }
 }
